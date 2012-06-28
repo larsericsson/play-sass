@@ -9,6 +9,7 @@ import play.vfs.VirtualFile;
 
 public class Plugin extends PlayPlugin {
     Engine sass;
+	private static final String cacheControl = Play.configuration.getProperty("http.cacheControl");
     
     @Override
     public void onLoad() {
@@ -25,7 +26,7 @@ public class Plugin extends PlayPlugin {
                 response.contentType = "text/css";
                 response.status = 200;
                 if(Play.mode == Play.Mode.PROD) {
-                    response.cacheFor("1h");
+					response.cacheFor(cacheControl + "s");
                 }
                 response.print(css);
             } catch(Exception e) {

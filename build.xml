@@ -25,7 +25,7 @@
                 <include name="**/play.static"/>
             </fileset>
         </copy>
-        <jar destfile="lib/play-sass.jar" basedir="tmp/classes">
+        <jar destfile="lib/sass.jar" basedir="tmp/classes">
             <manifest>
                 <section name="Play-module">
                     <attribute name="Specification-Title" value="sass"/>
