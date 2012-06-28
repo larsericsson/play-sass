@@ -9,3 +9,8 @@ dist
 .sass-cache
 .yardopts
 *.pyc
+Play-sass.iml
+
+lib/sass.jar
+
+samples-and-tests/using-sass-and-scss/Using-sass-and-scss.iml
